@@ -1,0 +1,7 @@
+# Stripe Style 主题包 — 挂载本插件唯一的 loader 行。
+#
+# 顶层必须是 YAML 数组（loader 补丁列表）。主题本身不在这里配置：
+# 两套配色写在 client.js 里，通过 ctx.theme.register() 注册。
+- insert:
+    - id: dsh-theme-stripe-style
+      name: 'dsh-theme-stripe-style'

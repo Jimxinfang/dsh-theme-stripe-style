@@ -1,0 +1,938 @@
+{
+  "runId": "2026-10-25T04-43-23-stripe",
+  "startedAt": "2026-10-25T04:43:23.207Z",
+  "finishedAt": "2026-10-25T04:44:16.176Z",
+  "durationMs": 52969,
+  "harness": {
+    "node": "v24.11.1",
+    "platform": "darwin",
+    "chrome": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+    "dshCli": "/Applications/DeepSeek Harness.app/Contents/Resources/runtime/cli/bin/dsh",
+    "dshHome": "/tmp/dsh-stripe-qa-home",
+    "profile": "web",
+    "artifactsDir": "/tmp/dsh-stripe-qa-artifacts/2026-10-25T04-43-23-stripe"
+  },
+  "config": {
+    "rowText": "Stripe 紫光主题",
+    "lightCard": "白昼紫",
+    "darkCard": "午夜蓝",
+    "restoreCard": "出厂外观",
+    "bodyMarker": "body[data-dsh-stripe-style]",
+    "bodyAttr": "data-dsh-stripe-style",
+    "styleTarget": "(auto: [data-composer-card] else body)",
+    "expects": {
+      "light": {
+        "radius": "12px",
+        "shadow": "0px 2px 4px",
+        "bg": "rgb(255, 255, 255)",
+        "bodyBg": "rgb(246, 249, 252)",
+        "attrValue": "light"
+      },
+      "dark": {
+        "radius": "12px",
+        "shadow": "0px 2px 4px",
+        "bg": "rgb(13, 43, 71)",
+        "bodyBg": "rgb(10, 37, 64)",
+        "attrValue": "dark"
+      }
+    },
+    "minDiffRatio": 0.001,
+    "resolvedStyleTarget": "[data-composer-card]"
+  },
+  "profile": {
+    "dependencies": [
+      "dsh-theme-stripe-style@link:/Users/lijiaming/Documents/workspace/deepseek/dsh-theme-stripe-style"
+    ],
+    "bundles": [
+      "@deepseek-ai/dsh-base",
+      "@deepseek-ai/dsh-web-app",
+      "dsh-theme-stripe-style"
+    ]
+  },
+  "server": {
+    "url": "http://127.0.0.1:61201/?token=<redacted>",
+    "origin": "http://127.0.0.1:61201",
+    "port": 61201,
+    "pid": 71348,
+    "startedByHarness": true,
+    "log": "/tmp/dsh-stripe-qa-artifacts/2026-10-25T04-43-23-stripe/server.log"
+  },
+  "steps": [
+    {
+      "name": "start dsh web server",
+      "at": "2026-10-25T04:43:23.367Z",
+      "detail": "port 61201, DSH_HOME=/tmp/dsh-stripe-qa-home"
+    },
+    {
+      "name": "open token URL and wait for app shell",
+      "at": "2026-10-25T04:43:25.230Z"
+    },
+    {
+      "name": "open Settings -> 通用 (General)",
+      "at": "2026-10-25T04:43:26.648Z"
+    },
+    {
+      "name": "locate theme row and classify variant cards",
+      "at": "2026-10-25T04:43:30.567Z"
+    },
+    {
+      "name": "reset to factory appearance before baseline",
+      "at": "2026-10-25T04:43:30.731Z"
+    },
+    {
+      "name": "click light variant card",
+      "at": "2026-10-25T04:43:33.512Z"
+    },
+    {
+      "name": "open Settings -> 通用 (General)",
+      "at": "2026-10-25T04:43:38.993Z"
+    },
+    {
+      "name": "locate theme row and classify variant cards",
+      "at": "2026-10-25T04:43:42.306Z"
+    },
+    {
+      "name": "click dark variant card",
+      "at": "2026-10-25T04:43:42.311Z"
+    },
+    {
+      "name": "switch viewport to 390x844 and screenshot mobile shell",
+      "at": "2026-10-25T04:43:46.586Z"
+    },
+    {
+      "name": "open Settings -> 通用 (General)",
+      "at": "2026-10-25T04:43:49.468Z"
+    },
+    {
+      "name": "locate theme row and classify variant cards",
+      "at": "2026-10-25T04:43:52.824Z"
+    },
+    {
+      "name": "click restore (出厂/默认) card",
+      "at": "2026-10-25T04:43:52.828Z"
+    }
+  ],
+  "states": {
+    "autoApply": {
+      "preResetMarkerAttr": "light",
+      "preResetBodyBg": "rgb(246, 249, 252)",
+      "preResetThemeTokens": 82,
+      "preResetMarkerSelectorPresent": true,
+      "preResetScreenshot": {
+        "name": "00a-first-load-before-factory-reset-1440x900",
+        "file": "/tmp/dsh-stripe-qa-artifacts/2026-10-25T04-43-23-stripe/00a-first-load-before-factory-reset-1440x900.png",
+        "width": 1440,
+        "height": 900,
+        "bytes": 185668,
+        "distinctColors": 3201,
+        "luminanceMean": 217.22,
+        "luminanceStdDev": 37.62
+      }
+    },
+    "baselineScrollTop": 420,
+    "baseline": {
+      "nonStyleAttrs": {},
+      "styleAttr": "--dsh-content-font-size: 14px; --dsh-code-font-size: 11px; --dsh-terminal-font-size: 13px;",
+      "bodyBg": "rgb(255, 255, 255)",
+      "bodyColor": "rgb(15, 17, 21)",
+      "markerSelectorPresent": false,
+      "themeVars": {
+        "--dsw-alias-bg-base": "#fff",
+        "--dsw-alias-brand-primary": "#0f1115",
+        "--dsw-specific-input-major": "#fff"
+      },
+      "targetStyle": {
+        "selector": "[data-composer-card]",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "borderRadius": "28px",
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0.5px, rgba(0, 0, 0, 0.03) 0px 4px 16px 0px, rgba(0, 0, 0, 0.03) 0px 0px 24px 0px",
+        "color": "rgb(15, 17, 21)"
+      },
+      "cards": [
+        {
+          "role": "restore",
+          "text": "出厂外观恢复 DSH 内置主题",
+          "pressed": "true",
+          "checked": null,
+          "borderColor": "rgb(15, 17, 21)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "boxShadow": "rgba(99, 91, 255, 0.18) 0px 0px 0px 3px, rgba(10, 37, 64, 0.12) 0px 12px 24px 0px",
+          "transform": "matrix(1, 0, 0, 1, 0, -2)"
+        },
+        {
+          "role": "light",
+          "text": "白昼紫浅灰网格 · 白卡片 · Stripe 紫",
+          "pressed": "false",
+          "checked": null,
+          "borderColor": "rgb(0, 0, 0)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "boxShadow": "rgba(0, 0, 0, 0.04) 0px 2px 4px 0px, rgba(0, 0, 0, 0.06) 0px 8px 16px 0px",
+          "transform": "none"
+        },
+        {
+          "role": "dark",
+          "text": "午夜蓝藏蓝底 · 亮紫 · 青色信号",
+          "pressed": "false",
+          "checked": null,
+          "borderColor": "rgba(0, 0, 0, 0.12)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "boxShadow": "rgba(0, 0, 0, 0.04) 0px 2px 4px 0px, rgba(0, 0, 0, 0.06) 0px 8px 16px 0px",
+          "transform": "none"
+        }
+      ]
+    },
+    "factoryReset": {
+      "performed": true,
+      "preResetMarkerAttr": "light",
+      "postResetMarkerAttr": null,
+      "preResetThemed": true
+    },
+    "light": {
+      "nonStyleAttrs": {
+        "data-dsh-stripe-style": "light"
+      },
+      "styleAttr": "--dsh-content-font-size: 14px; --dsh-code-font-size: 11px; --dsh-terminal-font-size: 13px; --dsw-alias-bg-base: #f6f9fc; --dsw-alias-bg-layer-1: #ffffff; --dsw-alias-bg-layer-2: #f1f5f9; --dsw-alias-bg-layer-3: #e6edf6; --dsw-alias-bg-overlay: #ffffff; --dsw-alias-bg-module-platform: #f6f9fc; --dsw-alias-bg-multi-select: rgba(99,91,255,.14); --dsw-alias-bg-skeleton: rgba(10,37,64,.08); --dsw-alias-bg-document-preview: #ffffff; --dsw-alias-label-document-preview: #0a2540; --dsw-alias-border-l1: #e3e8ee; --dsw-alias-border-l2-darkmode-thin: #d9e2ec; --dsw-alias-border-l2: #d9e2ec; --dsw-alias-border-l3: #c8d5e2; --dsw-alias-border-l4: #a9bccf; --dsw-alias-border-inverted: #0a2540; --dsw-alias-border-inverted2: #0a2540; --dsw-alias-brand-primary: #635bff; --dsw-alias-brand-primary-invert: #ffffff; --dsw-alias-brand-text: #524ae0; --dsw-alias-button-primary-fill: #635bff; --dsw-alias-button-primary-hover: #524ae0; --dsw-alias-button-primary-dimmed: #b9b5ff; --dsw-alias-button-info-fill: #00a3c2; --dsw-alias-button-info-hover: #008fb0; --dsw-alias-button-elevated-fill: #ffffff; --dsw-alias-button-floating-fill: #ffffff; --dsw-alias-button-floating-hover: #f6f9fc; --dsw-alias-button-ghost-active-border: #635bff; --dsw-alias-button-ghost-active-fill: rgba(99,91,255,.10); --dsw-alias-button-ghost-active-hover: rgba(99,91,255,.16); --dsw-alias-button-contrast-fill: #0a2540; --dsw-alias-interactive-bg-active: rgba(99,91,255,.14); --dsw-alias-interactive-bg-hover-accent: rgba(0,212,255,.12); --dsw-alias-interactive-bg-hover-danger: rgba(217,45,32,.08); --dsw-alias-interactive-bg-hover-solid: #eef2f7; --dsw-alias-interactive-bg-hover: #f1f5f9; --dsw-alias-label-primary: #0a2540; --dsw-alias-label-primary-bluish: #0a2540; --dsw-alias-label-primary-dimmed: #1f3b58; --dsw-alias-label-primary-foreground: #ffffff; --dsw-alias-label-primary-inverted: #ffffff; --dsw-alias-label-secondary: #3f566e; --dsw-alias-label-tertiary: #52667d; --dsw-alias-label-caption: #52667d; --dsw-alias-label-dimmed: #64748b; --dsw-alias-label-shimmer: rgba(10,37,64,.35); --dsw-alias-link: #4f46e5; --dsw-alias-menu-icon: #0a2540; --dsw-alias-markdown-code-block: #f8fafc; --dsw-alias-markdown-code-block-banner: #eef3f9; --dsw-alias-markdown-inline-code: #eef2ff; --dsw-alias-markdown-placeholder: #f1f5f9; --dsw-alias-markdown-tag: #eef2ff; --dsw-alias-markdown-citation: #f1f5f9; --dsw-alias-markdown-code-segment-selected: #ffffff; --dsw-alias-markdown-code-segment-unselected: #f8fafc; --dsw-alias-scrollbar-bg-l1: #d9e2ec; --dsw-alias-scrollbar-bg-l2: #c8d5e2; --dsw-alias-scrollbar-hover-l1: #b3c4d6; --dsw-alias-scrollbar-hover-l2: #9fb3c8; --dsw-alias-state-business-primary: #0a2540; --dsw-alias-state-business-tertiary: #eef2ff; --dsw-alias-state-idle-primary: #c8d5e2; --dsw-alias-state-success-primary: #0b7a43; --dsw-alias-state-success-secondary: #16a34a; --dsw-alias-state-success-tertiary: #e7f8ed; --dsw-alias-state-warn-label: #9a5b00; --dsw-alias-state-warn-primary: #d97706; --dsw-alias-state-warn-secondary: #f59e0b; --dsw-alias-state-warn-tertiary: #fef3e2; --dsw-alias-state-error-primary: #d92d20; --dsw-alias-state-error-secondary: #ef4444; --dsw-alias-code-diff-added: rgba(22,163,74,.10); --dsw-alias-code-diff-deleted: rgba(217,45,32,.10); --dsw-alias-toast-bg: #0a2540; --dsw-alias-toast-label: #f6f9fc; --dsw-alias-tooltip-bg: #0a2540; --dsw-alias-tooltip-key-bg: #1c3a5c; --dsw-alias-switch-thumb: #ffffff; --dsw-alias-turn-trigger-bg: #f1f5f9; --dsw-alias-turn-trigger-bg-hover: #e6edf6; --dsw-focus-ring-color: #635bff; --dsw-specific-bubble: #eef2ff; --dsw-specific-bubble-highlight: #e3e8ff; --dsw-specific-input-major: #ffffff; --dsw-specific-login-input: #ffffff; --dsw-specific-menu: #ffffff; --dsw-specific-selector: #ffffff; --dsw-specific-sidebar-fill: #fbfcfe; --dsw-specific-sidebar-nav-item-active-accent: rgba(99,91,255,.12); --dsw-specific-sidebar-nav-item-active: rgba(99,91,255,.10); --dsw-specific-sidebar-nav-item-hover: #f1f5f9; --dsw-specific-tip: #eef2ff; --dsw-elevation-stroke-color: #d9e2ec; --dsw-focus-ring-width: 3px;",
+      "bodyBg": "rgb(246, 249, 252)",
+      "bodyColor": "rgb(10, 37, 64)",
+      "markerSelectorPresent": true,
+      "themeVars": {
+        "--dsw-alias-bg-base": "#f6f9fc",
+        "--dsw-alias-brand-primary": "#635bff",
+        "--dsw-specific-input-major": "#ffffff"
+      },
+      "targetStyle": {
+        "selector": "[data-composer-card]",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "borderRadius": "12px",
+        "boxShadow": "rgba(0, 0, 0, 0.04) 0px 2px 4px 0px, rgba(0, 0, 0, 0.08) 0px 8px 16px 0px",
+        "color": "rgb(10, 37, 64)"
+      },
+      "cards": [
+        {
+          "role": "restore",
+          "text": "出厂外观恢复 DSH 内置主题",
+          "pressed": "false",
+          "checked": null,
+          "borderColor": "rgb(0, 0, 0)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "boxShadow": "rgba(0, 0, 0, 0.04) 0px 2px 4px 0px, rgba(0, 0, 0, 0.06) 0px 8px 16px 0px",
+          "transform": "none"
+        },
+        {
+          "role": "light",
+          "text": "白昼紫浅灰网格 · 白卡片 · Stripe 紫",
+          "pressed": "true",
+          "checked": null,
+          "borderColor": "rgb(99, 91, 255)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "boxShadow": "rgba(99, 91, 255, 0.18) 0px 0px 0px 3px, rgba(10, 37, 64, 0.12) 0px 12px 24px 0px",
+          "transform": "matrix(1, 0, 0, 1, 0, -2)"
+        },
+        {
+          "role": "dark",
+          "text": "午夜蓝藏蓝底 · 亮紫 · 青色信号",
+          "pressed": "false",
+          "checked": null,
+          "borderColor": "rgb(200, 213, 226)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "boxShadow": "rgba(0, 0, 0, 0.04) 0px 2px 4px 0px, rgba(0, 0, 0, 0.06) 0px 8px 16px 0px",
+          "transform": "none"
+        }
+      ],
+      "marker": {
+        "present": true,
+        "auto": true,
+        "extraAttrs": [
+          "data-dsh-stripe-style"
+        ],
+        "changedValueAttrs": [],
+        "bgChanged": true,
+        "styleChanged": true,
+        "selectorPresent": true
+      },
+      "styleTarget": {
+        "selector": "[data-composer-card]",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "borderRadius": "12px",
+        "boxShadow": "rgba(0, 0, 0, 0.04) 0px 2px 4px 0px, rgba(0, 0, 0, 0.08) 0px 8px 16px 0px",
+        "color": "rgb(10, 37, 64)"
+      },
+      "expectations": {
+        "radius": "12px",
+        "shadow": "0px 2px 4px",
+        "bg": "rgb(255, 255, 255)",
+        "bodyBg": "rgb(246, 249, 252)",
+        "attrValue": "light"
+      }
+    },
+    "dark": {
+      "nonStyleAttrs": {
+        "data-dsh-stripe-style": "dark",
+        "data-ds-dark-theme": ""
+      },
+      "styleAttr": "--dsh-content-font-size: 14px; --dsh-code-font-size: 11px; --dsh-terminal-font-size: 13px; --dsw-alias-bg-base: #0a2540; --dsw-alias-bg-layer-1: #0d2b47; --dsw-alias-bg-layer-2: #123350; --dsw-alias-bg-layer-3: #173c5d; --dsw-alias-bg-overlay: #0d2b47; --dsw-alias-bg-module-platform: #081e33; --dsw-alias-bg-multi-select: rgba(122,115,255,.24); --dsw-alias-bg-skeleton: rgba(246,249,252,.12); --dsw-alias-bg-document-preview: #0d2b47; --dsw-alias-label-document-preview: #dbe7f3; --dsw-alias-border-l1: rgba(246,249,252,.12); --dsw-alias-border-l2-darkmode-thin: rgba(246,249,252,.16); --dsw-alias-border-l2: rgba(246,249,252,.20); --dsw-alias-border-l3: rgba(246,249,252,.26); --dsw-alias-border-l4: rgba(246,249,252,.34); --dsw-alias-border-inverted: rgba(246,249,252,.20); --dsw-alias-border-inverted2: rgba(246,249,252,.20); --dsw-alias-brand-primary: #7a73ff; --dsw-alias-brand-primary-invert: #0a2540; --dsw-alias-brand-text: #9f9aff; --dsw-alias-button-primary-fill: #635bff; --dsw-alias-button-primary-hover: #7a73ff; --dsw-alias-button-primary-dimmed: #31406a; --dsw-alias-button-info-fill: #80e9ff; --dsw-alias-button-info-hover: #9ff0ff; --dsw-alias-button-elevated-fill: #123350; --dsw-alias-button-floating-fill: #16385a; --dsw-alias-button-floating-hover: #1c456b; --dsw-alias-button-ghost-active-border: #9f9aff; --dsw-alias-button-ghost-active-fill: rgba(122,115,255,.18); --dsw-alias-button-ghost-active-hover: rgba(122,115,255,.26); --dsw-alias-button-contrast-fill: #f6f9fc; --dsw-alias-interactive-bg-active: rgba(122,115,255,.24); --dsw-alias-interactive-bg-hover-accent: rgba(128,233,255,.18); --dsw-alias-interactive-bg-hover-danger: rgba(248,113,113,.16); --dsw-alias-interactive-bg-hover-solid: #1c456b; --dsw-alias-interactive-bg-hover: #123350; --dsw-alias-label-primary: #f6f9fc; --dsw-alias-label-primary-bluish: #dbe7f3; --dsw-alias-label-primary-dimmed: #e2ecf5; --dsw-alias-label-primary-foreground: #ffffff; --dsw-alias-label-primary-inverted: #0a2540; --dsw-alias-label-secondary: #b9c9da; --dsw-alias-label-tertiary: #93a9bf; --dsw-alias-label-caption: #93a9bf; --dsw-alias-label-dimmed: #8299b0; --dsw-alias-label-shimmer: rgba(246,249,252,.40); --dsw-alias-link: #80e9ff; --dsw-alias-menu-icon: #e2ecf5; --dsw-alias-markdown-code-block: #061a2e; --dsw-alias-markdown-code-block-banner: #0b2440; --dsw-alias-markdown-inline-code: #152f4d; --dsw-alias-markdown-placeholder: #123350; --dsw-alias-markdown-tag: #1b3a5c; --dsw-alias-markdown-citation: #123350; --dsw-alias-markdown-code-segment-selected: #123350; --dsw-alias-markdown-code-segment-unselected: #0d2b47; --dsw-alias-scrollbar-bg-l1: #1b3a5c; --dsw-alias-scrollbar-bg-l2: #16385a; --dsw-alias-scrollbar-hover-l1: #2a5075; --dsw-alias-scrollbar-hover-l2: #255073; --dsw-alias-state-business-primary: #80e9ff; --dsw-alias-state-business-tertiary: #123350; --dsw-alias-state-idle-primary: #3b5b7a; --dsw-alias-state-success-primary: #4ade80; --dsw-alias-state-success-secondary: #86efac; --dsw-alias-state-success-tertiary: #0f3a28; --dsw-alias-state-warn-label: #fbbf24; --dsw-alias-state-warn-primary: #f59e0b; --dsw-alias-state-warn-secondary: #fbbf24; --dsw-alias-state-warn-tertiary: #3a2a10; --dsw-alias-state-error-primary: #f87171; --dsw-alias-state-error-secondary: #fca5a5; --dsw-alias-code-diff-added: rgba(74,222,128,.14); --dsw-alias-code-diff-deleted: rgba(248,113,113,.14); --dsw-alias-toast-bg: #f6f9fc; --dsw-alias-toast-label: #0a2540; --dsw-alias-tooltip-bg: #123350; --dsw-alias-tooltip-key-bg: #24486c; --dsw-alias-switch-thumb: #7a73ff; --dsw-alias-turn-trigger-bg: #123350; --dsw-alias-turn-trigger-bg-hover: #173c5d; --dsw-focus-ring-color: #9f9aff; --dsw-specific-bubble: #16385a; --dsw-specific-bubble-highlight: #1c456b; --dsw-specific-input-major: #0d2b47; --dsw-specific-login-input: #0d2b47; --dsw-specific-menu: #0d2b47; --dsw-specific-selector: #0d2b47; --dsw-specific-sidebar-fill: #081e33; --dsw-specific-sidebar-nav-item-active-accent: rgba(122,115,255,.22); --dsw-specific-sidebar-nav-item-active: rgba(122,115,255,.18); --dsw-specific-sidebar-nav-item-hover: #123350; --dsw-specific-tip: #123350; --dsw-elevation-stroke-color: rgba(246,249,252,.18); --dsw-focus-ring-width: 3px;",
+      "bodyBg": "rgb(10, 37, 64)",
+      "bodyColor": "rgb(246, 249, 252)",
+      "markerSelectorPresent": true,
+      "themeVars": {
+        "--dsw-alias-bg-base": "#0a2540",
+        "--dsw-alias-brand-primary": "#7a73ff",
+        "--dsw-specific-input-major": "#0d2b47"
+      },
+      "targetStyle": {
+        "selector": "[data-composer-card]",
+        "backgroundColor": "rgb(13, 43, 71)",
+        "borderRadius": "12px",
+        "boxShadow": "rgba(0, 0, 0, 0.2) 0px 2px 4px 0px, rgba(0, 0, 0, 0.28) 0px 10px 24px 0px",
+        "color": "rgb(246, 249, 252)"
+      },
+      "cards": [
+        {
+          "role": "restore",
+          "text": "出厂外观恢复 DSH 内置主题",
+          "pressed": "false",
+          "checked": null,
+          "borderColor": "rgba(246, 249, 252, 0.26)",
+          "backgroundColor": "rgb(13, 43, 71)",
+          "boxShadow": "rgba(0, 0, 0, 0.04) 0px 2px 4px 0px, rgba(0, 0, 0, 0.06) 0px 8px 16px 0px",
+          "transform": "none"
+        },
+        {
+          "role": "light",
+          "text": "白昼紫浅灰网格 · 白卡片 · Stripe 紫",
+          "pressed": "false",
+          "checked": null,
+          "borderColor": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(13, 43, 71)",
+          "boxShadow": "rgba(0, 0, 0, 0.04) 0px 2px 4px 0px, rgba(0, 0, 0, 0.06) 0px 8px 16px 0px",
+          "transform": "none"
+        },
+        {
+          "role": "dark",
+          "text": "午夜蓝藏蓝底 · 亮紫 · 青色信号",
+          "pressed": "true",
+          "checked": null,
+          "borderColor": "rgb(122, 115, 255)",
+          "backgroundColor": "rgb(13, 43, 71)",
+          "boxShadow": "rgba(99, 91, 255, 0.18) 0px 0px 0px 3px, rgba(10, 37, 64, 0.12) 0px 12px 24px 0px",
+          "transform": "matrix(1, 0, 0, 1, 0, -2)"
+        }
+      ],
+      "marker": {
+        "present": true,
+        "auto": true,
+        "extraAttrs": [
+          "data-dsh-stripe-style",
+          "data-ds-dark-theme"
+        ],
+        "changedValueAttrs": [],
+        "bgChanged": true,
+        "styleChanged": true,
+        "selectorPresent": true
+      },
+      "styleTarget": {
+        "selector": "[data-composer-card]",
+        "backgroundColor": "rgb(13, 43, 71)",
+        "borderRadius": "12px",
+        "boxShadow": "rgba(0, 0, 0, 0.2) 0px 2px 4px 0px, rgba(0, 0, 0, 0.28) 0px 10px 24px 0px",
+        "color": "rgb(246, 249, 252)"
+      },
+      "expectations": {
+        "radius": "12px",
+        "shadow": "0px 2px 4px",
+        "bg": "rgb(13, 43, 71)",
+        "bodyBg": "rgb(10, 37, 64)",
+        "attrValue": "dark"
+      }
+    },
+    "restored": {
+      "nonStyleAttrs": {},
+      "styleAttr": "--dsh-content-font-size: 14px; --dsh-code-font-size: 11px; --dsh-terminal-font-size: 13px;",
+      "bodyBg": "rgb(255, 255, 255)",
+      "bodyColor": "rgb(15, 17, 21)",
+      "markerSelectorPresent": false,
+      "themeVars": {
+        "--dsw-alias-bg-base": "#fff",
+        "--dsw-alias-brand-primary": "#0f1115",
+        "--dsw-specific-input-major": "#fff"
+      },
+      "targetStyle": {
+        "selector": "[data-composer-card]",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "borderRadius": "28px",
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0.5px, rgba(0, 0, 0, 0.03) 0px 4px 16px 0px, rgba(0, 0, 0, 0.03) 0px 0px 24px 0px",
+        "color": "rgb(15, 17, 21)"
+      },
+      "cards": [
+        {
+          "role": "restore",
+          "text": "出厂外观恢复 DSH 内置主题",
+          "pressed": "true",
+          "checked": null,
+          "borderColor": "rgb(15, 17, 21)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "boxShadow": "rgba(99, 91, 255, 0.18) 0px 0px 0px 3px, rgba(10, 37, 64, 0.12) 0px 12px 24px 0px",
+          "transform": "matrix(1, 0, 0, 1, 0, -2)"
+        },
+        {
+          "role": "light",
+          "text": "白昼紫浅灰网格 · 白卡片 · Stripe 紫",
+          "pressed": "false",
+          "checked": null,
+          "borderColor": "rgba(0, 0, 0, 0.12)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "boxShadow": "rgba(0, 0, 0, 0.04) 0px 2px 4px 0px, rgba(0, 0, 0, 0.06) 0px 8px 16px 0px",
+          "transform": "none"
+        },
+        {
+          "role": "dark",
+          "text": "午夜蓝藏蓝底 · 亮紫 · 青色信号",
+          "pressed": "false",
+          "checked": null,
+          "borderColor": "rgb(0, 0, 0)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "boxShadow": "rgba(0, 0, 0, 0.04) 0px 2px 4px 0px, rgba(0, 0, 0, 0.06) 0px 8px 16px 0px",
+          "transform": "none"
+        }
+      ],
+      "marker": {
+        "present": false,
+        "auto": false,
+        "extraAttrs": [],
+        "changedValueAttrs": [],
+        "bgChanged": false,
+        "styleChanged": false,
+        "selectorPresent": false
+      }
+    }
+  },
+  "screenshots": [
+    {
+      "name": "00a-first-load-before-factory-reset-1440x900",
+      "file": "/tmp/dsh-stripe-qa-artifacts/2026-10-25T04-43-23-stripe/00a-first-load-before-factory-reset-1440x900.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 185668,
+      "distinctColors": 3201,
+      "luminanceMean": 217.22,
+      "luminanceStdDev": 37.62
+    },
+    {
+      "name": "00-baseline-settings-1440x900",
+      "file": "/tmp/dsh-stripe-qa-artifacts/2026-10-25T04-43-23-stripe/00-baseline-settings-1440x900.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 129362,
+      "distinctColors": 2217,
+      "luminanceMean": 219.13,
+      "luminanceStdDev": 36.38
+    },
+    {
+      "name": "01-light-settings-1440x900",
+      "file": "/tmp/dsh-stripe-qa-artifacts/2026-10-25T04-43-23-stripe/01-light-settings-1440x900.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 188573,
+      "distinctColors": 3241,
+      "luminanceMean": 217.1,
+      "luminanceStdDev": 37.86
+    },
+    {
+      "name": "02-light-shell-1440x900",
+      "file": "/tmp/dsh-stripe-qa-artifacts/2026-10-25T04-43-23-stripe/02-light-shell-1440x900.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 137232,
+      "distinctColors": 2252,
+      "luminanceMean": 247.1,
+      "luminanceStdDev": 14.48
+    },
+    {
+      "name": "03-dark-settings-1440x900",
+      "file": "/tmp/dsh-stripe-qa-artifacts/2026-10-25T04-43-23-stripe/03-dark-settings-1440x900.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 184138,
+      "distinctColors": 3405,
+      "luminanceMean": 31.85,
+      "luminanceStdDev": 25.9
+    },
+    {
+      "name": "04-dark-shell-1440x900",
+      "file": "/tmp/dsh-stripe-qa-artifacts/2026-10-25T04-43-23-stripe/04-dark-shell-1440x900.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 167330,
+      "distinctColors": 2945,
+      "luminanceMean": 37.49,
+      "luminanceStdDev": 14.2
+    },
+    {
+      "name": "05-dark-mobile-390x844",
+      "file": "/tmp/dsh-stripe-qa-artifacts/2026-10-25T04-43-23-stripe/05-dark-mobile-390x844.png",
+      "width": 390,
+      "height": 844,
+      "bytes": 58574,
+      "distinctColors": 2128,
+      "luminanceMean": 39.54,
+      "luminanceStdDev": 20.8
+    },
+    {
+      "name": "06-restored-settings-1440x900",
+      "file": "/tmp/dsh-stripe-qa-artifacts/2026-10-25T04-43-23-stripe/06-restored-settings-1440x900.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 129384,
+      "distinctColors": 2206,
+      "luminanceMean": 219.13,
+      "luminanceStdDev": 36.38
+    },
+    {
+      "name": "07-restored-shell-1440x900",
+      "file": "/tmp/dsh-stripe-qa-artifacts/2026-10-25T04-43-23-stripe/07-restored-shell-1440x900.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 41060,
+      "distinctColors": 1292,
+      "luminanceMean": 252.88,
+      "luminanceStdDev": 13.67
+    }
+  ],
+  "console": {
+    "errors": [],
+    "pageErrors": [],
+    "warnings": [],
+    "info": []
+  },
+  "assertions": [
+    {
+      "name": "app shell loaded (token auth accepted)",
+      "pass": true,
+      "expected": "app shell visible",
+      "actual": "visible"
+    },
+    {
+      "name": "Settings → 通用 opened and plugin theme row is present",
+      "pass": true,
+      "expected": "row text \"Stripe 紫光主题\"",
+      "actual": "present"
+    },
+    {
+      "name": "theme row variant cards classified",
+      "pass": true,
+      "expected": "light=\"白昼紫\", dark=\"午夜蓝\", restore=\"出厂外观\"",
+      "actual": {
+        "light": "白昼紫浅灰网格 · 白卡片 · Stripe 紫",
+        "dark": "午夜蓝藏蓝底 · 亮紫 · 青色信号",
+        "restore": "出厂外观恢复 DSH 内置主题"
+      }
+    },
+    {
+      "name": "variant cards matched by text (not positional fallback)",
+      "pass": true,
+      "expected": "both cards matched via env text patterns",
+      "actual": {
+        "lightExplicit": true,
+        "darkExplicit": true
+      },
+      "soft": true
+    },
+    {
+      "name": "plugin auto-applied its theme on first load (before factory reset)",
+      "pass": true,
+      "expected": "body has data-dsh-stripe-style",
+      "actual": {
+        "markerAttr": "light",
+        "markerSelectorPresent": true,
+        "bodyBg": "rgb(246, 249, 252)",
+        "themeTokenCount": 82
+      }
+    },
+    {
+      "name": "factory appearance clears the theme marker before baseline",
+      "pass": true,
+      "expected": "no body[data-dsh-stripe-style]",
+      "actual": false
+    },
+    {
+      "name": "baseline screenshot is non-blank",
+      "pass": true,
+      "expected": "distinctColors>=20 && stdDev>=2",
+      "actual": {
+        "distinctColors": 2217,
+        "stdDev": 36.38
+      }
+    },
+    {
+      "name": "light variant applies a theme marker (body attribute / background / token change)",
+      "pass": true,
+      "expected": "body matches body[data-dsh-stripe-style]",
+      "actual": {
+        "present": true,
+        "auto": true,
+        "extraAttrs": [
+          "data-dsh-stripe-style"
+        ],
+        "changedValueAttrs": [],
+        "bgChanged": true,
+        "styleChanged": true,
+        "selectorPresent": true
+      }
+    },
+    {
+      "name": "light variant sets body data-dsh-stripe-style",
+      "pass": true,
+      "expected": "attribute present with a value",
+      "actual": "light"
+    },
+    {
+      "name": "light variant card reflects selected state",
+      "pass": true,
+      "expected": "aria-pressed=true",
+      "actual": true
+    },
+    {
+      "name": "light: border-radius contains \"12px\"",
+      "pass": true,
+      "expected": "12px",
+      "actual": "12px",
+      "detail": {
+        "selector": "[data-composer-card]"
+      }
+    },
+    {
+      "name": "light: box-shadow contains \"0px 2px 4px\"",
+      "pass": true,
+      "expected": "0px 2px 4px",
+      "actual": "rgba(0, 0, 0, 0.04) 0px 2px 4px 0px, rgba(0, 0, 0, 0.08) 0px 8px 16px 0px",
+      "detail": {
+        "selector": "[data-composer-card]"
+      }
+    },
+    {
+      "name": "light: background-color matches \"rgb(255, 255, 255)\"",
+      "pass": true,
+      "expected": "rgb(255, 255, 255)",
+      "actual": "rgb(255, 255, 255)",
+      "detail": {
+        "selector": "[data-composer-card]"
+      }
+    },
+    {
+      "name": "light: body background-color matches \"rgb(246, 249, 252)\"",
+      "pass": true,
+      "expected": "rgb(246, 249, 252)",
+      "actual": "rgb(246, 249, 252)"
+    },
+    {
+      "name": "light: body data-dsh-stripe-style=\"light\"",
+      "pass": true,
+      "expected": "light",
+      "actual": "light"
+    },
+    {
+      "name": "light screenshot is non-blank",
+      "pass": true,
+      "expected": "distinctColors>=20 && stdDev>=2",
+      "actual": {
+        "distinctColors": 3241,
+        "stdDev": 37.86
+      }
+    },
+    {
+      "name": "light variant visually changes the UI (baseline -> light)",
+      "pass": true,
+      "expected": "pixel diff ratio >= 0.001",
+      "actual": 0.18001,
+      "detail": {
+        "comparable": true,
+        "ratio": 0.18001,
+        "diffPixels": 233288,
+        "totalPixels": 1296000,
+        "from": "00-baseline-settings-1440x900.png",
+        "to": "01-light-settings-1440x900.png"
+      }
+    },
+    {
+      "name": "settings closed after light selection",
+      "pass": true,
+      "expected": "settings hidden",
+      "actual": true,
+      "soft": true
+    },
+    {
+      "name": "Settings → 通用 opened and plugin theme row is present",
+      "pass": true,
+      "expected": "row text \"Stripe 紫光主题\"",
+      "actual": "present"
+    },
+    {
+      "name": "theme row variant cards classified",
+      "pass": true,
+      "expected": "light=\"白昼紫\", dark=\"午夜蓝\", restore=\"出厂外观\"",
+      "actual": {
+        "light": "白昼紫浅灰网格 · 白卡片 · Stripe 紫",
+        "dark": "午夜蓝藏蓝底 · 亮紫 · 青色信号",
+        "restore": "出厂外观恢复 DSH 内置主题"
+      }
+    },
+    {
+      "name": "variant cards matched by text (not positional fallback)",
+      "pass": true,
+      "expected": "both cards matched via env text patterns",
+      "actual": {
+        "lightExplicit": true,
+        "darkExplicit": true
+      },
+      "soft": true
+    },
+    {
+      "name": "dark variant keeps a theme marker active",
+      "pass": true,
+      "expected": "body matches body[data-dsh-stripe-style]",
+      "actual": {
+        "present": true,
+        "auto": true,
+        "extraAttrs": [
+          "data-dsh-stripe-style",
+          "data-ds-dark-theme"
+        ],
+        "changedValueAttrs": [],
+        "bgChanged": true,
+        "styleChanged": true,
+        "selectorPresent": true
+      }
+    },
+    {
+      "name": "dark variant sets body data-dsh-stripe-style to a distinct value",
+      "pass": true,
+      "expected": "different from light (\"light\")",
+      "actual": "dark"
+    },
+    {
+      "name": "dark variant card reflects selected state",
+      "pass": true,
+      "expected": "aria-pressed=true",
+      "actual": true
+    },
+    {
+      "name": "dark: border-radius contains \"12px\"",
+      "pass": true,
+      "expected": "12px",
+      "actual": "12px",
+      "detail": {
+        "selector": "[data-composer-card]"
+      }
+    },
+    {
+      "name": "dark: box-shadow contains \"0px 2px 4px\"",
+      "pass": true,
+      "expected": "0px 2px 4px",
+      "actual": "rgba(0, 0, 0, 0.2) 0px 2px 4px 0px, rgba(0, 0, 0, 0.28) 0px 10px 24px 0px",
+      "detail": {
+        "selector": "[data-composer-card]"
+      }
+    },
+    {
+      "name": "dark: background-color matches \"rgb(13, 43, 71)\"",
+      "pass": true,
+      "expected": "rgb(13, 43, 71)",
+      "actual": "rgb(13, 43, 71)",
+      "detail": {
+        "selector": "[data-composer-card]"
+      }
+    },
+    {
+      "name": "dark: body background-color matches \"rgb(10, 37, 64)\"",
+      "pass": true,
+      "expected": "rgb(10, 37, 64)",
+      "actual": "rgb(10, 37, 64)"
+    },
+    {
+      "name": "dark: body data-dsh-stripe-style=\"dark\"",
+      "pass": true,
+      "expected": "dark",
+      "actual": "dark"
+    },
+    {
+      "name": "dark screenshot is non-blank",
+      "pass": true,
+      "expected": "distinctColors>=20 && stdDev>=2",
+      "actual": {
+        "distinctColors": 3405,
+        "stdDev": 25.9
+      }
+    },
+    {
+      "name": "dark variant visually changes the UI (light -> dark)",
+      "pass": true,
+      "expected": "pixel diff ratio >= 0.001",
+      "actual": 0.99354,
+      "detail": {
+        "comparable": true,
+        "ratio": 0.99354,
+        "diffPixels": 1287629,
+        "totalPixels": 1296000,
+        "from": "01-light-settings-1440x900.png",
+        "to": "03-dark-settings-1440x900.png"
+      }
+    },
+    {
+      "name": "dark variant changes the page background versus light",
+      "pass": true,
+      "expected": "different body background",
+      "actual": {
+        "lightBg": "rgb(246, 249, 252)",
+        "darkBg": "rgb(10, 37, 64)"
+      },
+      "soft": true
+    },
+    {
+      "name": "settings closed after dark selection",
+      "pass": true,
+      "expected": "settings hidden",
+      "actual": true,
+      "soft": true
+    },
+    {
+      "name": "mobile screenshot has the required 390x844 viewport",
+      "pass": true,
+      "expected": "390x844",
+      "actual": "390x844"
+    },
+    {
+      "name": "mobile screenshot is non-blank",
+      "pass": true,
+      "expected": "distinctColors>=20 && stdDev>=2",
+      "actual": {
+        "distinctColors": 2128,
+        "stdDev": 20.8
+      }
+    },
+    {
+      "name": "mobile layout renders the app at the mobile viewport",
+      "pass": true,
+      "expected": "390x844 shell screenshot",
+      "actual": {
+        "width": 390,
+        "height": 844,
+        "crossViewportDiff": {
+          "comparable": false,
+          "ratio": null,
+          "reason": "dimensions differ"
+        }
+      },
+      "soft": true
+    },
+    {
+      "name": "Settings → 通用 opened and plugin theme row is present",
+      "pass": true,
+      "expected": "row text \"Stripe 紫光主题\"",
+      "actual": "present"
+    },
+    {
+      "name": "theme row variant cards classified",
+      "pass": true,
+      "expected": "light=\"白昼紫\", dark=\"午夜蓝\", restore=\"出厂外观\"",
+      "actual": {
+        "light": "白昼紫浅灰网格 · 白卡片 · Stripe 紫",
+        "dark": "午夜蓝藏蓝底 · 亮紫 · 青色信号",
+        "restore": "出厂外观恢复 DSH 内置主题"
+      }
+    },
+    {
+      "name": "variant cards matched by text (not positional fallback)",
+      "pass": true,
+      "expected": "both cards matched via env text patterns",
+      "actual": {
+        "lightExplicit": true,
+        "darkExplicit": true
+      },
+      "soft": true
+    },
+    {
+      "name": "restore removes the theme marker from <body>",
+      "pass": true,
+      "expected": "body no longer matches body[data-dsh-stripe-style]",
+      "actual": {
+        "present": false,
+        "auto": false,
+        "extraAttrs": [],
+        "changedValueAttrs": [],
+        "bgChanged": false,
+        "styleChanged": false,
+        "selectorPresent": false
+      }
+    },
+    {
+      "name": "restore returns the page background to baseline",
+      "pass": true,
+      "expected": "rgb(255, 255, 255)",
+      "actual": "rgb(255, 255, 255)"
+    },
+    {
+      "name": "restore returns the body token style attribute to baseline",
+      "pass": true,
+      "expected": "(identical)",
+      "actual": "--dsh-content-font-size: 14px; --dsh-code-font-size: 11px; --dsh-terminal-font-size: 13px;",
+      "soft": true
+    },
+    {
+      "name": "restore card reflects selected state",
+      "pass": true,
+      "expected": "aria-pressed=true",
+      "actual": true
+    },
+    {
+      "name": "restored screenshot is non-blank",
+      "pass": true,
+      "expected": "distinctColors>=20 && stdDev>=2",
+      "actual": {
+        "distinctColors": 2206,
+        "stdDev": 36.38
+      }
+    },
+    {
+      "name": "restore returns the UI to the baseline frame (pixel diff <= 1%)",
+      "pass": true,
+      "expected": "ratio <= 0.01",
+      "actual": 0.00086,
+      "detail": {
+        "comparable": true,
+        "ratio": 0.00086,
+        "diffPixels": 1114,
+        "totalPixels": 1296000
+      }
+    },
+    {
+      "name": "restore visibly reverts the shell (dark shell -> restored shell)",
+      "pass": true,
+      "expected": "pixel diff ratio >= 0.001",
+      "actual": 0.99998,
+      "detail": {
+        "comparable": true,
+        "ratio": 0.99998,
+        "diffPixels": 1295970,
+        "totalPixels": 1296000,
+        "from": "04-dark-shell-1440x900.png",
+        "to": "07-restored-shell-1440x900.png"
+      }
+    },
+    {
+      "name": "no browser console errors",
+      "pass": true,
+      "expected": "0 console.error messages",
+      "actual": []
+    },
+    {
+      "name": "no uncaught page errors",
+      "pass": true,
+      "expected": "0 pageerror events",
+      "actual": []
+    }
+  ],
+  "failures": [],
+  "error": null,
+  "passed": true,
+  "exitCode": 0
+}

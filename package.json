@@ -1,0 +1,93 @@
+{
+  "name": "dsh-theme-stripe-style",
+  "version": "0.1.0",
+  "description": "Stripe-style theme bundle for the DeepSeek Harness Web UI: Stripe purple #635bff, a 40px purple grid, layered soft shadows, 12px cards, 8px controls and an instant light/dark switch with factory restore. Stripe 风格主题：紫色网格、多级柔和阴影、亮紫强调，含白昼紫/午夜蓝双版本。",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "theme",
+    "stripe",
+    "stripe-style",
+    "fintech",
+    "dark-theme"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "icon.svg",
+    "README.md",
+    "DESIGN.md",
+    "LICENSE",
+    "docs/",
+    "scripts/"
+  ],
+  "engines": {
+    "node": ">=20",
+    "dsh": ">=0.2.1-rc.1 <0.3.0-0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-store",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-theme"
+      ]
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1",
+    "@deepseek-ai/dsh-client-locale": "*",
+    "@deepseek-ai/dsh-client-store": "*",
+    "@deepseek-ai/dsh-client-ui-theme": "*",
+    "react": "^18.2.0"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/cordis": {
+      "optional": true
+    },
+    "@deepseek-ai/dsh-client-locale": {
+      "optional": true
+    },
+    "@deepseek-ai/dsh-client-store": {
+      "optional": true
+    },
+    "@deepseek-ai/dsh-client-ui-theme": {
+      "optional": true
+    },
+    "react": {
+      "optional": true
+    }
+  },
+  "scripts": {
+    "check": "node --check index.js && node --check client.js",
+    "test": "node --test test/*.test.mjs"
+  },
+  "icon": "./icon.svg",
+  "author": "dsh-theme-stripe-style contributors",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jimxinfang/dsh-theme-stripe-style.git"
+  },
+  "homepage": "https://github.com/Jimxinfang/dsh-theme-stripe-style#readme",
+  "bugs": {
+    "url": "https://github.com/Jimxinfang/dsh-theme-stripe-style/issues"
+  }
+}

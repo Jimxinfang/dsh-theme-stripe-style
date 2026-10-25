@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="Stripe Style theme">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7a73ff"/>
+      <stop offset="1" stop-color="#635bff"/>
+    </linearGradient>
+    <linearGradient id="cardTop" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#635bff"/>
+      <stop offset="1" stop-color="#00d4ff"/>
+    </linearGradient>
+    <pattern id="grid" width="12" height="12" patternUnits="userSpaceOnUse">
+      <path d="M12 0H0V12" fill="none" stroke="#ffffff" stroke-opacity="0.18" stroke-width="1"/>
+    </pattern>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#0a2540" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
+  <rect width="64" height="64" rx="14" fill="url(#grid)"/>
+  <g filter="url(#soft)">
+    <rect x="11" y="18" width="42" height="30" rx="6" fill="#ffffff"/>
+    <rect x="11" y="18" width="42" height="4" rx="2" fill="url(#cardTop)"/>
+    <circle cx="20" cy="31" r="3" fill="#635bff"/>
+    <rect x="27" y="29" width="15" height="3" rx="1.5" fill="#0a2540" opacity="0.78"/>
+    <rect x="27" y="35" width="9" height="3" rx="1.5" fill="#0a2540" opacity="0.3"/>
+  </g>
+</svg>
