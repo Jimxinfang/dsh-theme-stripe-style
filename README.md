@@ -28,7 +28,15 @@ Stripe 风格主题插件，给 DeepSeek Harness Web GUI 换上「紫色网格 +
 
 插件兼容 **DSH Web 0.2.1 线**（在 `0.2.1-rc.3` 上完成端到端验证，见 [`docs/VERIFICATION.md`](docs/VERIFICATION.md)）。
 
-### 从 GitHub Release 安装（推荐）
+### 从 npm 安装（推荐）
+
+```sh
+dsh plugin --profile web add dsh-theme-stripe-style@0.1.0
+```
+
+装完重启对应的 `dsh web` / 桌面应用。npm 包与 GitHub Release 包内容一致，插件市场原生的「发现」索引也会直接识别 npm 版本。
+
+### 从 GitHub Release 安装（备选）
 
 预构建包挂在 GitHub Release 上，直接装，不需要 clone 或构建：
 
@@ -76,7 +84,7 @@ Release 里的 `dsh-theme-stripe-style-0.1.0.tgz` 与 `npm pack` 产物一致（
 
 1. 仓库已就绪：`dsh.bundle.patch` 清单、`cordis.patch.yml`、真实可运行代码、`dsh-plugin` topic、`screenshots.json`（6 张截图）、Release 预构建包。
 2. 目录项 `data/plugins/Jimxinfang__dsh-theme-stripe-style.yml` 使用 `category: theme` + `tarball:` 指向 Release 包；仓库创建满 1 天后提 PR（目录 CI 自动检查仓库年龄），维护者会在合并前实际阅读代码。
-3. 若之后发布 npm 包（`npm publish`，账号需 2FA），市场「发现」索引会自动识别 npm 版本，安装体验更好；不发布 npm 时，市场条目通过上面的 Release 包安装。
+3. npm 包已发布（`dsh-theme-stripe-style@0.1.0`），market catalog 会从 npm registry 自动识别版本，市场「发现」索引可直接安装；GitHub Release 包作为离线/固定版本备选。
 
 ## 使用
 
